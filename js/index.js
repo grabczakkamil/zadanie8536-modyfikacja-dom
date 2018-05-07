@@ -1,25 +1,17 @@
-$(function() {
-    'use strict';
+'use strict';
+$(function () {
 
-$("#first").click(function() {
-var parentElement = document.getElementById("main");
 
-var theFirstChild = parentElement.firstElementChild;
+    $("#first").click(function () {
 
-var theLastChild = parentElement.lastElementChild;
+        $("#main").prepend($("p:last"));
 
-parentElement.insertBefore(theLastChild, theFirstChild);   
+    });
 
-});    
-    
 
-$("#second").click(function() {
-    
-var parentElement = document.getElementById("main");
+    $("#second").click(function () {
 
-var theFirstChild = parentElement.firstElementChild;
-  
-parentElement.appendChild(theFirstChild);
-    
+        $("#main").append($("p:first"));
+
+    });
 });
-})
